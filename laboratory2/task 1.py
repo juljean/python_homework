@@ -5,6 +5,7 @@ re_answn=re.compile("\s{0,}n\s{0,}$")
 inp_x=re.compile("\s{0,}[-+]?[0-9]*\.?[0-9]*\s{0,}$")#float +-
 inp_int=re.compile("\s{0,}[+]?\d{0,}\s{0,}$")#index,int
 
+
 def validation(text, pattern): #matches text and pattern, returns true/false
     return bool(text.match(pattern))
 
