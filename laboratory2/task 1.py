@@ -9,6 +9,23 @@ inp_int=re.compile("\s{0,}[+]?\d{0,}\s{0,}$")#index,int
 def validation(text, pattern): #matches text and pattern, returns true/false
     return bool(text.match(pattern))
 
+
+def check(message):
+    flag = True
+    data = None
+    while flag:
+        data = input(message)
+        if bool(re.match('^[0-9]+$', data)):
+            data = int(data)
+            if data == 0:
+                print('Error 0')
+            else:
+                flag = False
+        else:
+            print('Error 404')
+    return data
+
+
 def index():
     n=input("Enter the integer value n, that >=1:")
     if validation(inp_int, n):
@@ -20,7 +37,7 @@ def index():
         print("You entered incorrect input. Try again.")
         index()
     return n
-n= index()
+# n= index()
 
 def val():
     x=input("Enter the value x:")
@@ -30,7 +47,7 @@ def val():
         print("You entered incorrect input. Try again.")
         val()
     return x
-x=val()
+
 
 def val_power():
     power=input("Enter the power you want to apply to the equation(only integers):")
@@ -40,7 +57,7 @@ def val_power():
         print("You entered incorrect input. Try again.")
         val_power()
     return power
-power= val_power()
+
 
 def ans():
     answer=input("Do you want to continue(y/n)?")
@@ -48,14 +65,17 @@ def ans():
         print("You entered incorrect symbol, choose y or n")
         answer = input("Do you want to continue(y/n)?")
     if validation(re_answy, answer):
-        index()
-        val()
-        val_power()
-        eval(x, n,power)
+        # index()
+        # val()
+        # val_power()
+        eval()
     elif validation(re_answn, answer):
         print("Bye")
 
-def eval(x,n, power):
+def eval():
+    x = val()
+    n = check("Enter the integer value n, that >=1:")
+    power = val_power()
     result=0
     for element in range (1,n+1):
         stage=(x+element)**power
@@ -63,4 +83,4 @@ def eval(x,n, power):
     print(result)
     ans()
 
-eval(x, n, power)
+eval()

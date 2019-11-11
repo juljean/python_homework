@@ -12,6 +12,7 @@ def inp_val():
         secind = input("Enter the range\nin what you want to check the amount of Armrsrong values\n(from 1 to n) : ")
     if validation(re_inp, secind):
         secind=int(secind)
+        armstrong_eval()
         if secind<1:
           print("Incorrect input: print the number bigger or equal to 1")
           inp_val()

@@ -56,6 +56,14 @@ def ans():
         print("You entered incorrect symbol, choose y or n")
         ans()
 def main_func(length, ams, change):
+    """
+    Функція приймає значення мінімальної довжини слова типу int , при якій будуть зміни, положення зміни у слові типу int,
+    та саму зміну типу str. Вертає вже змінене слово.
+    :param length: int
+    :param ams: int
+    :param change: str
+    :return: str
+    """
     word= input("Enter the word:")
     if len(word)<length:
         print("The word is too short. Try again.")
