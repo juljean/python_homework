@@ -1,4 +1,8 @@
 import re
+"""
+при х>3, y=-3x+9
+при х<=3, y=x^3/(x^2+8)
+"""
 print("Надь Юлія Артурівна \nЛабораторна робота №1 \nВаріант 13 \nЗнаходження усіх значень функції \n")
 re_answy=re.compile("\s{0,}y\s{0,}$")#comparing with tamplate func
 re_answn=re.compile("\s{0,}n\s{0,}$")
@@ -24,7 +28,7 @@ def ans():
         print("You entered incorrect symbol, choose y or n")
         answer = input("Do you want to continue(y/n)?")
     if validation(re_answy, answer):
-        inp_val()
+        val = inp_val()
         eval_func(val)
     elif validation(re_answn, answer):
         print("Bye")

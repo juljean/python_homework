@@ -1,4 +1,7 @@
 import re
+"""
+обчислити суму від 1 до n виразу (x+i)^2
+"""
 print("Надь Юлія Артурівна \nЛабораторна робота №2 \nВаріант 13 \nОбчислення значення по формулі.\n")
 re_answy=re.compile("\s{0,}y\s{0,}$")#comparing with tamplate func
 re_answn=re.compile("\s{0,}n\s{0,}$")

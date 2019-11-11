@@ -1,4 +1,7 @@
 import re
+"""
+13) Дано ціле число N(>0). Якщо воно є ступенем числа 3, то вивести True, якщо ні - вивести False.
+"""
 print("Надь Юлія Артурівна \nЛабораторна робота №2 \nВаріант 13 \nДано ціле число N(>0). Якщо воно є ступенем числа 3, то вивести True,\nякщо ні - вивести False.\n")
 re_answy=re.compile("\s{0,}y\s{0,}$")#comparing with tamplate func
 re_answn=re.compile("\s{0,}n\s{0,}$")
@@ -36,8 +39,8 @@ def ans():
         print("You entered incorrect symbol, choose y or n")
         answer = input("Do you want to continue(y/n)?")
     if validation(re_answy, answer):
-        val_power()
-        index()
+        number=val_power()
+        n=index()
         eval(n, number)
     elif validation(re_answn, answer):
         print("Bye")

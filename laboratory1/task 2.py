@@ -1,4 +1,7 @@
 import re
+"""
+13) Визначити правильність дати, введеної з клавіатури (число - від 1 до 31, місяць - від 1 до 12.  Якщо введені некоректні дані, то повідомити про це.
+"""
 print("Надь Юлія Артурівна \nЛабораторна робота №1 \nВаріант 13 \nВизначення правильності дати\n")
 re_answy=re.compile("\s{0,}y\s{0,}$")#comparing with tamplate func
 re_answn=re.compile("\s{0,}n\s{0,}$")
@@ -35,8 +38,8 @@ def ans():
         print("You entered incorrect symbol, choose y or n")
         answer = input("Do you want to continue(y/n)?")
     if validation(re_answy, answer):
-        day_inp()
-        month_inp()
+        day = day_inp()
+        month = month_inp()
         cor_date(month, day)
     elif validation(re_answn, answer):
         print("Bye")
